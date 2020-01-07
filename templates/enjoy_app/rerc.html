@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends "enjoy_app/index.html" %}
+{% load staticfiles %}
+{% block body_blok %}
+
+
+<link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+
+
+<div class="table-responsive-md">
+
+  {% if rerc %}
+
+  <table class="table table-dark">
+    <thead>
+      <th>Tweet ID</th>
+      <th>Date</th>
+      <th>Texte</th>
+    </thead>
+
+            {% for id,infos in rerc.items %}
+            <tr>
+              <td>{{ id }}</td>
+              {% for i in infos %}
+
+                  <td>{{ i }}</td>
+
+
+              {% endfor %}
+            </tr>
+
+            {% endfor %}
+  </table>
+  {% else %}
+
+  <p>NO ACCESS RECORDS FOUND !</p>
+
+  {% endif %}
+
+
+</div>
+{% endblock %}

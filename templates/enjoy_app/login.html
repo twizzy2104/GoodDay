@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "enjoy_app/login1.html" %}
+
+
+{% block body_blok %}
+<form action="{% url 'enjoy_app:user_login' %}" method="post">
+  {% csrf_token %}
+  <h1>Log in</h1>
+  <div class="inset">
+  <p>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="email">
+  </p>
+  <p>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+  </p>
+  </div>
+  <p class="p-container">
+    <input type="submit" name="go" id="go" value="Log in">
+  </p>
+</form>
+{% endblock %}

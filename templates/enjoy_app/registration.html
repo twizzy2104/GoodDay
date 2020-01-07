@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "enjoy_app/login1.html" %}
+
+
+{% block body_blok %}
+
+
+
+
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+
+
+
+        <form enctype="multipart/form-data" method="POST">
+
+            <h1>Register Here</h1>
+
+          {% csrf_token %}
+          <!-- <label >Username</label> -->
+          {{ user_form.as_p}}
+          <!-- <label >Email</label> -->
+
+          <!-- {{ user_form.email}} -->
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+
+      {% endif %}
+
+
+
+{% endblock %}
+ <!-- Already have an account? -->

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% extends "enjoy_app/index.html" %}
+{% load staticfiles %}
+
+
+{% block body_blok %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center">
+        <h2>{{ ville }}</h2>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      {% if 'nuageux' in description %}
+      <div class="text-center">
+        <img class="rounded" src="{% static "images/nuageux.jpg" %}" alt="pas d'image">
+
+      </div>
+
+
+      {% elif 'Dégagé' in description %}
+      <img src="{% static "images/ensoleille.jpeg" %}" alt="pas d'image">
+
+      {% elif 'couvert' in description %}
+      <img src="{% static "images/couvert.jpeg" %}" alt="pas d'image">
+
+      {% elif 'Pluies' in description %}
+      <img src="{% static "images/pluvieux.png" %}" alt="pas d'image">
+
+
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center">
+        <h3>{{ description }}</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="text-center">
+        <h3>Température : {{ temperature }} (feeling {{ temperature_ressenti }})</h3>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}

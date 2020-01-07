@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "enjoy_app/index.html" %}
+{% load staticfiles %}
+{% block body_blok %}
+
+<div class="row">
+
+
+<div class="col">
+<div class="card" style="width: 18rem;">
+  <img src="/static/images/rerc.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">RER C</h5>
+    <p class="card-text">Twitter infos.</p>
+    <a href="{% url 'enjoy_app:rerc' %}" class="btn btn-primary">Voir les TWeets</a>
+  </div>
+</div>
+</div>
+
+<div class="col">
+<div class="card" style="width: 18rem;">
+  <img src="/static/images/rera.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">RER A</h5>
+    <p class="card-text">Twitter infos.</p>
+    <a href="{% url 'enjoy_app:rera' %}" class="btn btn-primary">Voir les TWeets</a>
+  </div>
+</div>
+</div>
+
+<div class="col">
+<div class="card" style="width: 18rem;">
+  <img src="/static/images/m14.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Métro 14</h5>
+    <p class="card-text">Twitter infos.</p>
+    <a href="{% url 'enjoy_app:m14' %}" class="btn btn-primary">Voir les TWeets</a>
+  </div>
+</div>
+</div>
+
+
+</div>
+{% endblock %}
