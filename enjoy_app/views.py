@@ -127,9 +127,10 @@ def horoscope(request) :
 def rerc(request):
 
     import tweepy
-
-    auth = tweepy.OAuthHandler('2AdSRso0UdW3cMlwPDoRD8QG2','pKO1t67v79M5tfbsEVcJxG6HsZ0E4mM0QRX1edPpCFpNem9JJS')
-    auth.set_access_token('882928972585201664-l9yHYp3rvKOxycghUwDBNdz0PHCCVMA','IsKxhlIW8JdGaxLU7u0tbb7hhGyjR4u8Wt9lDbNtGriO3')
+    
+    #Inscrire les acces twitter
+    auth = tweepy.OAuthHandler('','')
+    auth.set_access_token('','')
 
     api = tweepy.API(auth)
 
@@ -150,10 +151,9 @@ def rerc(request):
 def rera(request):
 
     import tweepy
-
-    auth = tweepy.OAuthHandler('2AdSRso0UdW3cMlwPDoRD8QG2','pKO1t67v79M5tfbsEVcJxG6HsZ0E4mM0QRX1edPpCFpNem9JJS')
-    auth.set_access_token('882928972585201664-l9yHYp3rvKOxycghUwDBNdz0PHCCVMA','IsKxhlIW8JdGaxLU7u0tbb7hhGyjR4u8Wt9lDbNtGriO3')
-
+    #Inscrire les acces twitter
+    auth = tweepy.OAuthHandler('','')
+    auth.set_access_token('','')
     api = tweepy.API(auth)
 
     lst_rerc =[]
@@ -171,10 +171,9 @@ def rera(request):
 def m14(request):
 
     import tweepy
-
-    auth = tweepy.OAuthHandler('2AdSRso0UdW3cMlwPDoRD8QG2','pKO1t67v79M5tfbsEVcJxG6HsZ0E4mM0QRX1edPpCFpNem9JJS')
-    auth.set_access_token('882928972585201664-l9yHYp3rvKOxycghUwDBNdz0PHCCVMA','IsKxhlIW8JdGaxLU7u0tbb7hhGyjR4u8Wt9lDbNtGriO3')
-
+    #Inscrire les acces twitter
+    auth = tweepy.OAuthHandler('','')
+    auth.set_access_token('','')
     api = tweepy.API(auth)
 
     dico_build = {}
